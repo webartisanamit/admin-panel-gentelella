@@ -55,6 +55,48 @@
                                         <a href="#" class="text-danger">Delete</a>
                                     </td>
                                 </tr>
+                                <tr class="even pointer">
+                                    <td>121000040</td>
+                                    <td>
+                                        <figure class="profile-img-icon"><img src="{{ asset('assets/images/img.jpg') }}" alt=""></figure>
+                                        John
+                                    </td>
+                                    <td>john@gmail.com</td>
+                                    <td>9876543215</td>
+                                    <td class="text-center">
+                                        <a href="#" class="text-info">View</a> |
+                                        <a href="#" class="text-success">Edit</a> |
+                                        <a href="#" class="text-danger">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr class="even pointer">
+                                    <td>121000040</td>
+                                    <td>
+                                        <figure class="profile-img-icon"><img src="{{ asset('assets/images/img.jpg') }}" alt=""></figure>
+                                        John
+                                    </td>
+                                    <td>john@gmail.com</td>
+                                    <td>9876543215</td>
+                                    <td class="text-center">
+                                        <a href="#" class="text-info">View</a> |
+                                        <a href="#" class="text-success">Edit</a> |
+                                        <a href="#" class="text-danger">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr class="even pointer">
+                                    <td>121000040</td>
+                                    <td>
+                                        <figure class="profile-img-icon"><img src="{{ asset('assets/images/img.jpg') }}" alt=""></figure>
+                                        John
+                                    </td>
+                                    <td>john@gmail.com</td>
+                                    <td>9876543215</td>
+                                    <td class="text-center">
+                                        <a href="#" class="text-info">View</a> |
+                                        <a href="#" class="text-success">Edit</a> |
+                                        <a href="#" class="text-danger">Delete</a>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
