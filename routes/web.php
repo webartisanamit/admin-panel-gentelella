@@ -30,6 +30,7 @@ Route::namespace('App\Http\Controllers')->group(function() {
         Route::get('logout', 'AuthController@logout')->name('logout');
         Route::get('dashboard','DashboardController@dashboard')->name('dashboard');
         Route::get('profile','AuthController@profile')->name('profile');
+        Route::get('change-password', 'AuthController@changePasswordForm')->name('changePassword');
 
         Route::resource('users', 'UsersController');
         Route::resource('drivers', 'DriverController');

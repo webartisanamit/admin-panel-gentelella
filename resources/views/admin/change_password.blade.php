@@ -1,67 +1,52 @@
 @extends('layouts.admin')
 @section('content')
-
-    <div class="col-xl-12 order-xl-1">
-        <div class="card">
-            <div class="card-header">
-                <div class="row align-items-center">
-                    <div class="col-8">
-                        <h3 class="mb-0">Change Password </h3>
-                    </div>
+<div class="">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>Change Password</h3>
+        </div>
+        <div class="title_right">
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Change Password Form</h2>
+                    <div class="clearfix"></div>
                 </div>
-            </div>
-            <div class="card-body">
-                <form enctype="multipart/form-data" action="{{ route('admin.changePassword') }}" method="POST">
-                    @csrf
-                    {{-- <h6 class="heading-small text-muted mb-4">User information</h6> --}}
-                    <div class="pl-lg-4">
+                <div class="x_content">
+                    <form id="demo-form" data-parsley-validate>
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label class="form-control-label" for="input-email">Current Password</label>
-                                    <input class="form-control" id="password-field" type="password" name="current_password"
-                                        placeholder="Current Password" required>
+                                    <label for="current-password">Current Password * :</label>
+                                    <input type="password" id="current-password" class="form-control" name="current_password" required />
                                 </div>
-                                @error('current_password')
-                                    <span class="validation invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="new-password">New Password * :</label>
+                                    <input type="password" id="new-password" class="form-control" name="password" required />
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="confirm-password">Confirm New Password * :</label>
+                                    <input type="password" id="confirm-password" class="form-control" name="password_confirmation" data-parsley-trigger="change" required />
+                                </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-control-label" for="input-email">New Password</label>
-                                    <input class="form-control" id="password-new" type="password" placeholder="New Password" name="new_password"
-                                        required>
-                                </div>
-                                @error('new_password')
-                                    <span class="validation invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                            <div class="col-sm-12">
+                                <button type="Submit" class="btn btn-primary">Submit</button>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-control-label" for="input-email">Confirm New Password</label>
-                                    <input class="form-control" id="password-confirm" type="password" placeholder="Confirm New Password"
-                                        name="confirm_password" required>
-                                </div>
-                                @error('confirm_password')
-                                    <span class="validation invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary my-4"> Submit </button>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-    </div>
+</div>
 @endsection

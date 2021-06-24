@@ -1,83 +1,77 @@
 @extends('layouts.admin')
 @section('content')
-    <div class="col-xl-12 order-xl-1">
-        <div class="card">
-            <div class="card-header">
-                <div class="row align-items-center">
-                    <div class="col-8">
-                        <h3 class="mb-0">Edit profile </h3>
-                    </div>
+<div class="">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>Profile</h3>
+        </div>
+        <div class="title_right">
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Edit Profile</h2>
+                    <div class="clearfix"></div>
                 </div>
-            </div>
-            <div class="card-body">
-                <form enctype="multipart/form-data" action="{{ route('admin.profile-update') }}" method="POST">
-                    @csrf
-                    <h6 class="heading-small text-muted mb-4">User information</h6>
-                    <div class="pl-lg-4">
+                <div class="x_content">
+                    <form id="demo-form" data-parsley-validate>
                         <div class="row">
-                            <div class="col-lg-12">
+                            <div class="col-sm-6">
                                 <div class="form-group">
-                                    <div class="col-auto">
-                                        <img alt="Image placeholder" src="{{ $user->profile_photo_url }}"
-                                            class="avatar rounded-circle profile-picture">
+                                    <div class="profile-picture-upload">
+                                        <img src="" alt="Profile picture preview" class="imagePreview">
+                                        <button class="upload-button mode-upload" type="button">Upload avatar</button>
+                                        <input type="file" class="hidden-inputfile upload-image" accept="image/*" name="profile_photo" />
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label class="form-control-label" for="input-username">Profile Picture</label>
-                                    <input type="file" id="input-profile-picture" class="form-control"
-                                        placeholder="profile_photo" name="profile_photo" accept="image/*">
+                                    <label for="firstname">First Name * :</label>
+                                    <input type="text" id="firstname" class="form-control" name="first_name" required />
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label class="form-control-label" for="input-email">Email address</label>
-                                    <input type="email" id="input-email" class="form-control" name="email"
-                                        value="{{ old('email', $user->email) }}">
+                                    <label for="lastname">Last Name * :</label>
+                                    <input type="text" id="lastname" class="form-control" name="last_name" required />
                                 </div>
                             </div>
                         </div>
+
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label class="form-control-label" for="input-first-name">First name</label>
-                                    <input type="text" id="input-first-name" name="first_name" class="form-control"
-                                        placeholder="First name" value="{{ old('first_name', $user->first_name) }}">
+                                    <label for="email">Email * :</label>
+                                    <input type="email" id="email" class="form-control" name="email" data-parsley-trigger="change" required />
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label class="form-control-label" for="input-last-name">Last name</label>
-                                    <input type="text" id="input-last-name" class="form-control" name="last_name"
-                                        placeholder="Last name" value="{{ old('last_name', $user->last_name ?? '') }}">
+                                    <label for="phone">Phone Number * :</label>
+                                    <input type="text" id="phone" class="form-control" name="phone_number" required />
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary my-4"> Submit </button>
-                </form>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <button type="Submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+</div>
 @endsection
-
 @section('extra_scripts')
-    <script>
-        $(document).ready(function() {
-            $('body').on('change', '#input-profile-picture', function() {
-                var input = $(this)[0];
-                if (input.files.length) {
-                    var reader = new FileReader();
-                    reader.onload = function(e) {
-                        $('.profile-picture').attr('src', e.target.result);
-                    }
-                    reader.readAsDataURL(input.files[0]);
-                }
-            });
-        });
-
-    </script>
+    <script src="{{ asset('assets/js/upload-file.js') }}"></script>
 @endsection
