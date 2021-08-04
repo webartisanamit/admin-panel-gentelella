@@ -3,7 +3,7 @@
 <div class="">
     <div class="page-title">
         <div class="title_left">
-            <h3>Categories</h3>
+            <h3>Banners</h3>
         </div>
         <div class="title_right"> </div>
     </div>
@@ -14,7 +14,7 @@
         <div class="col-md-12 col-sm-12  ">
             <div class="x_panel">
                 <div class="x_title">
-                    <a class="btn btn-success btn-sm pull-right" href="{{ route('admin.categories.create') }}">
+                    <a class="btn btn-success btn-sm pull-right" href="{{ route('admin.banners.create') }}">
                         <i class="fa fa-plus"></i> Add
                     </a>
                     <div class="clearfix"></div>
@@ -25,8 +25,11 @@
                             <thead>
                                 <tr class="headings">
                                     <th class="column-title">#</th>
-                                    <th class="column-title">Category Image</th>
-                                    <th class="column-title">Category Name</th>
+                                    <th class="column-title">Image</th>
+                                    <th class="column-title">Discount Type</th>
+                                    <th class="column-title">Discount Value</th>
+                                    <th class="column-title">Start Date</th>
+                                    <th class="column-title">End Date</th>
                                     <th class="column-title">Status</th>
                                     <th class="column-title no-link last text-center"><span class="nobr">Action</span></th>
                                 </tr>
@@ -37,7 +40,10 @@
                                     <td>
                                         <figure class="table-image-icon"><img src="{{ asset('assets/images/img.jpg') }}" alt=""></figure>
                                     </td>
-                                    <td>Category</td>
+                                    <td>Flat</td>
+                                    <td>20</td>
+                                    <td>2021-10-10</td>
+                                    <td>2021-10-20</td>
                                     <td>Active</td>
                                     <td class="text-center">
                                         <a href="#" class="text-success">Edit</a> |
@@ -49,7 +55,10 @@
                                     <td>
                                         <figure class="table-image-icon"><img src="{{ asset('assets/images/img.jpg') }}" alt=""></figure>
                                     </td>
-                                    <td>Category Test</td>
+                                    <td>Percent</td>
+                                    <td>20</td>
+                                    <td>2021-10-10</td>
+                                    <td>2021-10-20</td>
                                     <td>Inactive</td>
                                     <td class="text-center">
                                         <a href="#" class="text-success">Edit</a> |

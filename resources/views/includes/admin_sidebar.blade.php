@@ -52,6 +52,28 @@ $segment3 = request()->segment(3) ?? '';
                             <li><a href="{{ route('admin.products.index') }}">List</a></li>
                         </ul>
                     </li>
+                    <li><a><i class="fa fa-percent"></i> Discounts <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="{{ route('admin.discounts.create') }}">Add</a></li>
+                            <li><a href="{{ route('admin.discounts.index') }}">List</a></li>
+                        </ul>
+                    </li>
+                    <li><a><i class="fa fa-picture-o"></i> Banners <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="{{ route('admin.banners.create') }}">Add</a></li>
+                            <li><a href="{{ route('admin.banners.index') }}">List</a></li>
+                        </ul>
+                    </li>
+                    <li><a><i class="fa fa-shopping-cart"></i> Orders <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="{{ route('admin.orders.index') }}">List</a></li>
+                        </ul>
+                    </li>
+                    <li><a><i class="fa fa-usd"></i> Payments <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="{{ route('admin.payments.index') }}">List</a></li>
+                        </ul>
+                    </li>
                     <li><a><i class="fa fa-file"></i> Pages <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="{{ route('admin.pages.create') }}">Add</a></li>

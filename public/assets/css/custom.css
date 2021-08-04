@@ -4991,6 +4991,22 @@ figure.profile-img-icon img {
     border-radius: 50%;
 }
 
+figure.table-image-icon {
+    height: 70px;
+    width: 70px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 5%;
+    margin: 0px 10px 0 0px;
+}
+
+figure.table-image-icon img {
+    max-height: 70px;
+    max-width: 70px;
+    border-radius: 5%;
+}
+
 #uploadImage {
     display: none;
 }

@@ -3,7 +3,7 @@
 <div class="">
     <div class="page-title">
         <div class="title_left">
-            <h3>Categories</h3>
+            <h3>Discounts</h3>
         </div>
         <div class="title_right"> </div>
     </div>
@@ -14,7 +14,7 @@
         <div class="col-md-12 col-sm-12  ">
             <div class="x_panel">
                 <div class="x_title">
-                    <a class="btn btn-success btn-sm pull-right" href="{{ route('admin.categories.create') }}">
+                    <a class="btn btn-success btn-sm pull-right" href="{{ route('admin.discounts.create') }}">
                         <i class="fa fa-plus"></i> Add
                     </a>
                     <div class="clearfix"></div>
@@ -25,32 +25,34 @@
                             <thead>
                                 <tr class="headings">
                                     <th class="column-title">#</th>
-                                    <th class="column-title">Category Image</th>
-                                    <th class="column-title">Category Name</th>
-                                    <th class="column-title">Status</th>
+                                    <th class="column-title">Name</th>
+                                    <th class="column-title">Code</th>
+                                    <th class="column-title">Discount Type</th>
+                                    <th class="column-title">Discount Price</th>
+                                    <th class="column-title">Validity</th>
                                     <th class="column-title no-link last text-center"><span class="nobr">Action</span></th>
                                 </tr>
                             </thead>
                             <tbody class="va-middle">
                                 <tr class="even pointer">
-                                    <td>121000040</td>
-                                    <td>
-                                        <figure class="table-image-icon"><img src="{{ asset('assets/images/img.jpg') }}" alt=""></figure>
-                                    </td>
-                                    <td>Category</td>
-                                    <td>Active</td>
+                                    <td>1210</td>
+                                    <td>Discount 1</td>
+                                    <td>DIWAALI20</td>
+                                    <td>Flat</td>
+                                    <td>10</td>
+                                    <td>2021-07-30 - 2021-07-31</td>
                                     <td class="text-center">
                                         <a href="#" class="text-success">Edit</a> |
                                         <a href="#" class="text-danger">Delete</a>
                                     </td>
                                 </tr>
                                 <tr class="odd pointer">
-                                    <td>121000040</td>
-                                    <td>
-                                        <figure class="table-image-icon"><img src="{{ asset('assets/images/img.jpg') }}" alt=""></figure>
-                                    </td>
-                                    <td>Category Test</td>
-                                    <td>Inactive</td>
+                                    <td>1211</td>
+                                    <td>Discount 2</td>
+                                    <td>HOLY20</td>
+                                    <td>Percentage</td>
+                                    <td>10%</td>
+                                    <td>2021-07-30 - 2021-07-31</td>
                                     <td class="text-center">
                                         <a href="#" class="text-success">Edit</a> |
                                         <a href="#" class="text-danger">Delete</a>

@@ -38,6 +38,10 @@ Route::namespace('App\Http\Controllers')->group(function() {
         Route::resource('categories', 'CategoryController');
         Route::resource('brands', 'BrandController');
         Route::resource('products', 'ProductController');
+        Route::resource('banners', 'BannerController');
+        Route::resource('discounts', 'DiscountController');
+        Route::resource('orders', 'OrderController');
+        Route::resource('payments', 'PaymentController');
         Route::resource('pages', 'PageController');
         Route::resource('faqs', 'FaqsController');
     });

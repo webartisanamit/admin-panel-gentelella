@@ -14,6 +14,9 @@
         <div class="col-md-12 col-sm-12  ">
             <div class="x_panel">
                 <div class="x_title">
+                    <a class="btn btn-success btn-sm pull-right" href="{{ route('admin.brands.create') }}">
+                        <i class="fa fa-plus"></i> Add
+                    </a>
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
@@ -32,7 +35,7 @@
                                 <tr class="even pointer">
                                     <td>121000040</td>
                                     <td>
-                                        <figure class="profile-img-icon"><img src="{{ asset('assets/images/img.jpg') }}" alt=""></figure>
+                                        <figure class="table-image-icon"><img src="{{ asset('assets/images/img.jpg') }}" alt=""></figure>
                                     </td>
                                     <td>Brand</td>
                                     <td>Active</td>
@@ -41,10 +44,10 @@
                                         <a href="#" class="text-danger">Delete</a>
                                     </td>
                                 </tr>
-                                <tr class="even pointer">
+                                <tr class="odd pointer">
                                     <td>121000040</td>
                                     <td>
-                                        <figure class="profile-img-icon"><img src="{{ asset('assets/images/img.jpg') }}" alt=""></figure>
+                                        <figure class="table-image-icon"><img src="{{ asset('assets/images/img.jpg') }}" alt=""></figure>
                                     </td>
                                     <td>Brand Test</td>
                                     <td>Inactive</td>
