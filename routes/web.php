@@ -32,9 +32,12 @@ Route::namespace('App\Http\Controllers')->group(function() {
         Route::get('profile','AuthController@profile')->name('profile');
         Route::get('change-password', 'AuthController@changePasswordForm')->name('changePassword');
 
+        Route::resource('admins', 'AdminController');
         Route::resource('users', 'UsersController');
         Route::resource('drivers', 'DriverController');
-        Route::resource('admins', 'AdminController');
+        Route::resource('categories', 'CategoryController');
+        Route::resource('brands', 'BrandController');
+        Route::resource('products', 'ProductController');
         Route::resource('pages', 'PageController');
         Route::resource('faqs', 'FaqsController');
     });

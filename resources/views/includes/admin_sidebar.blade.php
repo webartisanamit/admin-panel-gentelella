@@ -16,35 +16,50 @@ $segment3 = request()->segment(3) ?? '';
                     <li>
                         <a href="{{ route('admin.dashboard') }}"><i class="fa fa-home"></i> Dashboard</a>
                     </li>
+                    <li><a><i class="fa fa-user"></i> Admin <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="{{ route('admin.admins.create') }}">Add</a></li>
+                            <li><a href="{{ route('admin.admins.index') }}">List</a></li>
+                        </ul>
+                    </li>
                     <li><a><i class="fa fa-users"></i> Users <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="{{ route('admin.users.create') }}">Create User</a></li>
-                            <li><a href="{{ route('admin.users.index') }}">Users List</a></li>
+                            <li><a href="{{ route('admin.users.create') }}">Add</a></li>
+                            <li><a href="{{ route('admin.users.index') }}">List</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-users"></i> Drivers <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="{{ route('admin.drivers.create') }}">Create Driver</a></li>
-                            <li><a href="{{ route('admin.drivers.index') }}">Drivers List</a></li>
+                            <li><a href="{{ route('admin.drivers.create') }}">Add</a></li>
+                            <li><a href="{{ route('admin.drivers.index') }}">List</a></li>
+                        </ul>
+                    </li>
+                    <li><a><i class="fa fa-tag"></i> Categories <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="{{ route('admin.categories.create') }}">Add</a></li>
+                            <li><a href="{{ route('admin.categories.index') }}">List</a></li>
+                        </ul>
+                    </li>
+                    <li><a><i class="fa fa-list"></i> Brands <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="{{ route('admin.brands.create') }}">Add</a></li>
+                            <li><a href="{{ route('admin.brands.index') }}">List</a></li>
+                        </ul>
+                    </li>
+                    <li><a><i class="fa fa-product-hunt"></i> Products <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="{{ route('admin.products.create') }}">Add</a></li>
+                            <li><a href="{{ route('admin.products.index') }}">List</a></li>
+                        </ul>
+                    </li>
+                    <li><a><i class="fa fa-file"></i> Pages <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="{{ route('admin.pages.create') }}">Add</a></li>
+                            <li><a href="{{ route('admin.pages.index') }}">List</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
-        </div>
-
-        <div class="sidebar-footer hidden-small">
-            <a data-toggle="tooltip" data-placement="top" title="Settings">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="Lock">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="Logout" href="{{ route('admin.loginForm') }}">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-            </a>
         </div>
     </div>
 </div>
